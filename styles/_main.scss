@@ -1,0 +1,152 @@
+main {
+  margin-top: 160px;
+  margin-bottom: 185px;
+
+  .leader {
+    position: relative;
+    img {
+      width: 70%;
+    }
+
+    .leader-content {
+      background-color: $white;
+      width: 50%;
+      padding: 90px 20px 0px 90px;
+      position: absolute;
+      bottom: 0;
+      right: 0;
+
+      h2 {
+        margin-bottom: 40px;
+      }
+    }
+  }
+
+  .creations {
+    margin-top: 160px;
+
+    .creations-title {
+      justify-content: space-between;
+    }
+
+    .mobile-button {
+      visibility: hidden;
+    }
+    .creations-content {
+      margin-top: 80px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 30px;
+
+      .creations-item {
+        color: $white;
+        transition: all 0.3s ease-in-out;
+        position: relative;
+        overflow: hidden;
+        cursor: pointer;
+
+        img {
+          transition: all 0.3s ease-in-out;
+          height: 100%;
+        }
+
+        h3 {
+          position: absolute;
+          left: 0;
+          bottom: 0;
+          margin: 40px;
+          font-size: 28px;
+          line-height: 1.8rem;
+          z-index: 2;
+        }
+
+        &:after {
+          content: "";
+          position: absolute;
+          left: 0;
+          top: 0;
+          width: 100%;
+          height: 100%;
+          display: inline-block;
+          background: linear-gradient(
+            to bottom,
+            rgba(0, 0, 0, 0) 0%,
+            rgba(0, 0, 0, 0.5) 100%
+          );
+        }
+
+        &:hover {
+          color: $black;
+
+          &:after {
+            background: none;
+          }
+
+          img {
+            opacity: 0.3;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    margin-top: 80px;
+    margin-bottom: 100px;
+
+    .leader {
+      img {
+        width: 100%;
+      }
+      .leader-content {
+        width: 100%;
+        position: static;
+        padding: 20px;
+        text-align: center;
+
+        h2 {
+          margin-top: 60px;
+          margin-bottom: 35px;
+        }
+      }
+    }
+
+    .creations {
+      margin-top: 100px;
+
+      .creations-title {
+        justify-content: center;
+        button {
+          display: none;
+        }
+      }
+
+      .creations-content {
+        grid-template-columns: 1fr;
+        margin-top: 50px;
+
+        .creations-item {
+          height: 150px;
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+
+          h3 {
+            margin: 25px;
+            width: 50%;
+          }
+        }
+      }
+      .mobile-button {
+        visibility: visible;
+        margin-top: 40px;
+        justify-content: center;
+        .btn-primary {
+          padding: 15px 50px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,38 @@
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.btn-primary {
+  font-family: $headerFont;
+  font-weight: bold;
+  border: 2px solid $veryDarkGray;
+  background-color: $white;
+  padding: 10px 35px;
+  cursor: pointer;
+  &:focus {
+    outline: none;
+  }
+  &:hover {
+    background-color: $black;
+    color: $white;
+  }
+}
+.navigation-link {
+  ul li:not(:first-child) {
+    margin-left: 40px;
+  }
+  a {
+    padding-bottom: 5px;
+    font-size: 14px;
+
+    &:hover {
+      border-bottom: 2px solid $white;
+    }
+  }
+}

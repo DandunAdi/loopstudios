@@ -1,0 +1,45 @@
+@import "./variables";
+@import "./helpers";
+@import "./header";
+@import "./main";
+@import "./footer";
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: $textFont;
+}
+h1,
+h2,
+h3,
+h4 {
+  font-family: $headerFont;
+}
+h1 {
+  font-size: 68px;
+  font-weight: 200;
+}
+h2 {
+  font-size: 38px;
+  letter-spacing: 2px;
+  font-weight: 200;
+  @media (max-width: 768px) {
+    font-size: 32px;
+  }
+}
+p {
+  font-size: 14px;
+  color: $darkGray;
+  line-height: 1.4rem;
+  font-weight: lighter;
+}
+a {
+  text-decoration: none;
+  color: $white;
+}
+ul {
+  list-style-type: none;
+}
